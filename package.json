@@ -3,8 +3,13 @@
 	"displayName": "SFText Utility",
 	"description": "Utilities for SFText",
 	"version": "1.0.0",
-	"publisher": "Rugosa Soft",
-	"icon": "icon.png",
+	"publisher": "dotprologue",
+	"icon": "./images/icon.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dotprologue/sftext-utility.git"
+	},
 	"keywords": [
 		"sftext",
 		"scenarioflow"
@@ -13,7 +18,7 @@
 		"vscode": "^1.84.0"
 	},
 	"categories": [
-		"Programming Languages"
+		"Other"
 	],
 	"activationEvents": [
 		"onLanguage:sftext"

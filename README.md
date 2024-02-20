@@ -1,9 +1,31 @@
-# sftext-utility README
+# SFText Utility
 
-## Features
+Utility for SFText. SFText is a script format used in ScenarioFlow.
 
-Utilities for SFText
+See here for details about ScenarioFlow.
 
-### 1.0.0
+This extension provides editing support like snippets for SFText.
 
-Initial release of ...
+Inserting command name snippets:
+
+![example](./images/CommandNameSnippet.gif)
+
+Inserting command arguments snippets:
+
+![example](./images/CommandParameterSnippet.gif)
+
+Inserting extra dialogue arguments snippets:
+
+![example](./images/DialogueSnippet2.gif)
+
+Inserting macro snippets:
+
+![example](./images/MacroSnippet.gif)
+
+Moving the cursor:
+
+![example](./images/MoveCursor.gif)
+
+Inserting new lines:
+
+![example](./images/NewLine.gif)
