@@ -1,62 +1,138 @@
 {
-  "name": "sftext-utility",
-  "displayName": "sftext-utility",
-  "description": "Utilities for SFText",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.84.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onLanguage:sftext"
-  ],
-  "main": "./out/extension.js",
-  "contributes": {
-    "snippets": [
-      {
-        "language": "sftext",
-        "path": "./snippets/snippet.json"
-      }
-    ],
-    "commands": [
-      {
-        "command": "sftext-utility.helloworld",
-        "title": "Hello World"
-      },
-      {
-        "command": "sftext-utility.goodmorning",
-        "title": "GoodMorning"
-      },
-      {
-        "command": "sftext-utility.insertArgs",
-        "title": "Insert Arguments"
-      },
-      {
-        "command": "sftext-utility.formatCursor",
-        "title": "Format Cursor"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.84.0",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "16.x",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "eslint": "^8.47.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "typescript": "^5.1.6",
-    "@vscode/test-electron": "^2.3.4"
-  }
+	"name": "sftext-utility",
+	"displayName": "SFText Utility",
+	"description": "Utilities for SFText",
+	"version": "1.0.0",
+	"publisher": "Rugosa Soft",
+	"icon": "icon.png",
+	"keywords": [
+		"sftext",
+		"scenarioflow"
+	],
+	"engines": {
+		"vscode": "^1.84.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onLanguage:sftext"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "sftext",
+				"path": "./snippets/snippets.code-snippets.json"
+			},
+			{
+				"language": "sftext",
+				"path": "./snippets/snippets.variable-snippets.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "sftext-utility.insertArguments",
+				"title": "Insert Arguments",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.moveCursor",
+				"title": "Move Cursor",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.insertLineBelow",
+				"title": "Insert Line Below",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.loadJson",
+				"title": "Load JSON File",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.selectJson",
+				"title": "Select JSON Path",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.clearJson",
+				"title": "Clear JSON Data",
+				"enablement": "resourceLangId == sftext"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "sftext-utility.insertArguments",
+				"key": "alt+enter",
+				"mac": "ctrl+enter"
+			},
+			{
+				"command": "sftext-utility.moveCursor",
+				"key": "shift+enter",
+				"mac": "shift+enter"
+			},
+			{
+				"command": "sftext-utility.insertLineBelow",
+				"key": "ctrl+enter",
+				"mac": "cmd+enter"
+			}
+		],
+		"configuration": {
+			"title": "SFText Utility",
+			"properties": {
+				"SFText Utility.commandMacroSnippet": {
+					"order": 0,
+					"type": "string",
+					"default": "Dialogue command: {${1:name}}",
+					"description": "Snippet for command macro scopes."
+				},
+				"SFText Utility.xcommandMacroSnippet": {
+					"order": 1,
+					"type": "string",
+					"default": "Ex-dialogue command: {${1:name}}",
+					"description": "Snippet for xcommand macro scopes."
+				},
+				"SFText Utility.tokenMacroSnippet": {
+					"order": 2,
+					"type": "string",
+					"default": "Dialogue token code: {${1:\\$token}}",
+					"description": "Snippet for token macro scopes."
+				},
+				"SFText Utility.defineMacroSnippet": {
+					"order": 3,
+					"type": "string",
+					"default": "{${1:symbol}} means {${2:value}}.",
+					"description": "Snippet for define macro scopes."
+				},
+				"SFText Utility.labelMacroSnippet": {
+					"order": 4,
+					"type": "string",
+					"default": "//============ {${1:name}} ============//",
+					"description": "Snippet for label macro scopes."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.84.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "16.x",
+		"@typescript-eslint/eslint-plugin": "^6.4.1",
+		"@typescript-eslint/parser": "^6.4.1",
+		"eslint": "^8.47.0",
+		"glob": "^10.3.3",
+		"mocha": "^10.2.0",
+		"typescript": "^5.1.6",
+		"@vscode/test-electron": "^2.3.4"
+	}
 }

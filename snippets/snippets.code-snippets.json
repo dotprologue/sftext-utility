@@ -1,0 +1,177 @@
+{
+	"Token Macro Scope": {
+		"prefix": [
+			"#token"
+		],
+		"body": [
+			"#token"
+		],
+		"description": [
+			"Specify a token code used in dialogue scopes."
+		]
+	},
+	"Command Macro Scope": {
+		"prefix": [
+			"#command"
+		],
+		"body": [
+			"#command"
+		],
+		"description": [
+			"Specify a command used in dialogue scopes."
+		]
+	},
+	"Extra Command Macro Scope": {
+		"prefix": [
+			"#xcommand"
+		],
+		"body": [
+			"#xcommand"
+		],
+		"description": [
+			"Specify a command used in dialogue scopes that require extra arguments."
+		]
+	},
+	"Definition Macro Scope": {
+		"prefix": [
+			"#define"
+		],
+		"body": [
+			"#define"
+		],
+		"description": [
+			"The specified symbol will be replaced with the specified value. The targets are only character names and extra arguments in dialogue scopes and arguments in command scopes."
+		]
+	},
+	"Label Macro Scope": {
+		"prefix": [
+			"#label"
+		],
+		"body": [
+			"#label"
+		],
+		"description": [
+			"Bind a label to a dialogue or command scope."
+		]
+	},
+	"Standard Command Scope": {
+		"prefix": [
+			"$standard"
+		],
+		"body": [
+			"\\$standard"
+		]
+	},
+	"Fluent-Standard Command Scope": {
+		"prefix": [
+			"$f-standard"
+		],
+		"body": [
+			"\\$f-standard"
+		]
+	},
+	"[Not Recommended] Serial-Standard Command Scope": {
+		"prefix": [
+			"$s-standard"
+		],
+		"body": [
+			"\\$s-standard"
+		]
+	},
+	"[Not Recommended] Parallel-Standard Command Scope": {
+		"prefix": [
+			"$p-standard"
+		],
+		"body": [
+			"\\$p-standard"
+		]
+	},
+	"Forced Command Scope": {
+		"prefix": [
+			"$forced"
+		],
+		"body": [
+			"\\$forced"
+		]
+	},
+	"Fluent-Forced Command Scope": {
+		"prefix": [
+			"$f-forced"
+		],
+		"body": [
+			"\\$f-forced"
+		]
+	},
+	"[Not Recommended] Serial-Forced Command Scope": {
+		"prefix": [
+			"$s-forced"
+		],
+		"body": [
+			"\\$s-forced"
+		]
+	},
+	"[Not Recommended] Parallel-Forced Command Scope": {
+		"prefix": [
+			"$p-forced"
+		],
+		"body": [
+			"\\$p-forced"
+		]
+	},
+	"Promised Command Scope": {
+		"prefix": [
+			"$promised"
+		],
+		"body": [
+			"\\$promised"
+		]
+	},
+	"Fluent-Promised Command Scope": {
+		"prefix": [
+			"$f-promised"
+		],
+		"body": [
+			"\\$f-promised"
+		]
+	},
+	"[Not Recommended] Serial-Promised Command Scope": {
+		"prefix": [
+			"$s-promised"
+		],
+		"body": [
+			"\\$s-promised"
+		]
+	},
+	"[Not Recommended] Parallel-Promised Command Scope": {
+		"prefix": [
+			"$p-promised"
+		],
+		"body": [
+			"\\$p-promised"
+		]
+	},
+	"Serial Command Scope": {
+		"prefix": [
+			"$serial"
+		],
+		"body": [
+			"\\$serial"
+		]
+	},
+	"Parallel Command Scope": {
+		"prefix": [
+			"$parallel"
+		],
+		"body": [
+			"\\$parallel"
+		]
+	},
+	"Synchronous Command Scope": {
+		"prefix": [
+			"$sync"
+		],
+		"body": [
+			"\\$sync"
+		]
+	}
+}
