@@ -2,7 +2,7 @@
 
 Utility for SFText. SFText is a script format used in ScenarioFlow.
 
-See here for details about ScenarioFlow.
+See [here](https://github.com/dotprologue/ScenarioFlow.git) for details about ScenarioFlow.
 
 This extension provides editing support like snippets for SFText.
 
