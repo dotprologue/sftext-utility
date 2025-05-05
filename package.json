@@ -2,7 +2,7 @@
 	"name": "sftext-utility",
 	"displayName": "SFText Utility",
 	"description": "Utilities for SFText",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"publisher": "dotprologue",
 	"icon": "./images/icon.png",
 	"license": "MIT",
@@ -197,28 +197,48 @@
 					"order": 5,
 					"type": "string",
 					"default": "global",
-					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"enum": [
+						"global",
+						"local",
+						"upwardChain",
+						"downwardChain"
+					],
 					"description": "Scope annotation to be assigned to macro scopes by the Add Scope IDs command"
 				},
 				"SFText Utility.commandAnnotation": {
 					"order": 6,
 					"type": "string",
 					"default": "global",
-					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"enum": [
+						"global",
+						"local",
+						"upwardChain",
+						"downwardChain"
+					],
 					"description": "Scope annotation to be assigned to command scopes by the Add Scope IDs command"
 				},
 				"SFText Utility.dialogueAnnotation": {
 					"order": 6,
 					"type": "string",
 					"default": "global",
-					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"enum": [
+						"global",
+						"local",
+						"upwardChain",
+						"downwardChain"
+					],
 					"description": "Scope annotation to be assigned to dialogue scopes by the Add Scope IDs command"
 				},
 				"SFText Utility.commentAnnotation": {
 					"order": 7,
 					"type": "string",
 					"default": "global",
-					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"enum": [
+						"global",
+						"local",
+						"upwardChain",
+						"downwardChain"
+					],
 					"description": "Scope annotation to be assigned to comment scopes by the Add Scope IDs command"
 				}
 			}
