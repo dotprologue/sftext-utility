@@ -1,31 +1,33 @@
 # SFText Utility
 
-Utility for SFText. SFText is a script format used in ScenarioFlow.
+This extension provides commands for editing SFText in ScenarioFlow. See [here](https://github.com/dotprologue/ScenarioFlow.git) for details about ScenarioFlow and the usage of this extension.
 
-See [here](https://github.com/dotprologue/ScenarioFlow.git) for details about ScenarioFlow.
+| Command | Shortcut key (Windows) | Function |
+| --- | --- | --- |
+| Load JSON File | - | Load the snippet JSON file at the specified path |
+| Select JSON Path | - | Select the target JSON file path |
+| Clear JSON Data | - | Clear the data regarding snippets |
+| Move Cursor | Shift+Enter | Move the cursor to the positions of the vertical bars at the line in order |
+| Insert Arguments | Alt+Enter | Insert the argument snippet for the scope |
+| Insert Scope Below | Ctrl+Enter | Insert a new line below the scope |
+| Insert Scope Above | Ctrl+Shift+Enter | Insert a new line above the scope |
+| Toggle Line Comment | Ctrl+/ | Comment out or uncomment the lines in the selection |
+| Toggle Scope Comment | Ctrl+Shift+/ | Comment out or uncomment the scope start lines in the selection |
+| Add Scope IDs | - | Add scope annotations to scopes that have no annotation |
+| Reallocate Scope IDs | - | Reallocate sequential scope IDs to global/local scopes |
+| Remove All Scope Annotations | - | Remove all existing scope annotations |
+| Switch Scope Locality | F4 | Switch the scope locality (global/local) |
+| Chain Scope Upward | Ctrl+Shift+Up | Set the scope annotation as upward chaining |
+| Chain Scope Downward | Ctrl+Shift+Down | Set the scope annotation as downward chaining |
 
-This extension provides editing support like snippets for SFText.
-
-Inserting command name snippets:
-
-![example](./images/CommandNameSnippet.gif)
-
-Inserting command arguments snippets:
-
-![example](./images/CommandParameterSnippet.gif)
-
-Inserting extra dialogue arguments snippets:
-
-![example](./images/DialogueSnippet2.gif)
-
-Inserting macro snippets:
-
-![example](./images/MacroSnippet.gif)
-
-Moving the cursor:
-
-![example](./images/MoveCursor.gif)
-
-Inserting new lines:
-
-![example](./images/NewLine.gif)
+| Settings | Summary |
+| --- | --- |
+| Command Macro Snippet | Snippet to be inserted to command macro scopes by the Insert Argument Snippet command |
+| Xcommand Macro Snippet | Snippet to be inserted to xcommand macro scopes by the Insert Argument Snippet command |
+| Token Macro Snippet | Snippet to be inserted to token macro scopes by the Insert Argument Snippet command |
+| Define Macro Snippet | Snippet to be inserted to define macro scopes by the Insert Argument Snippet command |
+| Label Macro Snippet | Snippet to be inserted to label macro scopes by the Insert Argument Snippet command |
+| Macro Annotation | Scope annotation to be assigned to macro scopes by the Add Scope IDs command |
+| Command Annotation | Scope annotation to be assigned to command scopes by the Add Scope IDs command |
+| Dialogue Annotation | Scope annotation to be assigned to dialogue scopes by the Add Scope IDs command |
+| Comment Annotation | Scope annotation to be assigned to comment scopes by the Add Scope IDs command |

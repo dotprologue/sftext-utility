@@ -48,8 +48,23 @@
 				"enablement": "resourceLangId == sftext"
 			},
 			{
-				"command": "sftext-utility.insertLineBelow",
-				"title": "Insert Line Below",
+				"command": "sftext-utility.insertScopeBelow",
+				"title": "Insert Scope Below",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.insertScopeAbove",
+				"title": "Insert Scope Above",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.toggleLineComment",
+				"title": "Toggle Line Comment",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.toggleScopeComment",
+				"title": "Toggle Scope Comment",
 				"enablement": "resourceLangId == sftext"
 			},
 			{
@@ -66,6 +81,36 @@
 				"command": "sftext-utility.clearJson",
 				"title": "Clear JSON Data",
 				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.addScopeAnnotations",
+				"title": "Add Scope Annotations",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.reallocateScopeIds",
+				"title": "Reallocate Scope IDs",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.removeAllScopeAnnotations",
+				"title": "Remove All Scope Annotations",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.switchScopeLocality",
+				"title": "Switch Scope Locality",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.chainScopeUpward",
+				"title": "Chain Scope Upward",
+				"enablement": "resourceLangId == sftext"
+			},
+			{
+				"command": "sftext-utility.chainScopeDownward",
+				"title": "Chain Scope Downward",
+				"enablement": "resourceLangId == sftext"
 			}
 		],
 		"keybindings": [
@@ -80,9 +125,39 @@
 				"mac": "shift+enter"
 			},
 			{
-				"command": "sftext-utility.insertLineBelow",
+				"command": "sftext-utility.insertScopeBelow",
 				"key": "ctrl+enter",
 				"mac": "cmd+enter"
+			},
+			{
+				"command": "sftext-utility.insertScopeAbove",
+				"key": "shift+ctrl+enter",
+				"mac": "shift+cmd+enter"
+			},
+			{
+				"command": "sftext-utility.toggleLineComment",
+				"key": "ctrl+/",
+				"mac": "cmd+/"
+			},
+			{
+				"command": "sftext-utility.toggleScopeComment",
+				"key": "shift+ctrl+/",
+				"mac": "shift+cmd+/"
+			},
+			{
+				"command": "sftext-utility.chainScopeDownward",
+				"key": "ctrl+shift+down",
+				"mac": "cmd+shift+down"
+			},
+			{
+				"command": "sftext-utility.switchScopeLocality",
+				"key": "F4",
+				"mac": "F4"
+			},
+			{
+				"command": "sftext-utility.chainScopeUpward",
+				"key": "ctrl+shift+up",
+				"mac": "cmd+shift+up"
 			}
 		],
 		"configuration": {
@@ -92,31 +167,59 @@
 					"order": 0,
 					"type": "string",
 					"default": "Dialogue command: {${1:name}}",
-					"description": "Snippet for command macro scopes."
+					"description": "Snippet to be inserted to command macro scopes by the Insert Argument Snippet command"
 				},
 				"SFText Utility.xcommandMacroSnippet": {
 					"order": 1,
 					"type": "string",
 					"default": "Ex-dialogue command: {${1:name}}",
-					"description": "Snippet for xcommand macro scopes."
+					"description": "Snippet to be inserted to xcommand macro scopes by the Insert Argument Snippet command"
 				},
 				"SFText Utility.tokenMacroSnippet": {
 					"order": 2,
 					"type": "string",
 					"default": "Dialogue token code: {${1:\\$token}}",
-					"description": "Snippet for token macro scopes."
+					"description": "Snippet to be inserted to token macro scopes by the Insert Argument Snippet command"
 				},
 				"SFText Utility.defineMacroSnippet": {
 					"order": 3,
 					"type": "string",
 					"default": "{${1:symbol}} means {${2:value}}.",
-					"description": "Snippet for define macro scopes."
+					"description": "Snippet to be inserted to define macro scopes by the Insert Argument Snippet command"
 				},
 				"SFText Utility.labelMacroSnippet": {
 					"order": 4,
 					"type": "string",
 					"default": "//============ {${1:name}} ============//",
-					"description": "Snippet for label macro scopes."
+					"description": "Snippet to be inserted to label macro scopes by the Insert Argument Snippet command"
+				},
+				"SFText Utility.macroAnnotation": {
+					"order": 5,
+					"type": "string",
+					"default": "global",
+					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"description": "Scope annotation to be assigned to macro scopes by the Add Scope IDs command"
+				},
+				"SFText Utility.commandAnnotation": {
+					"order": 6,
+					"type": "string",
+					"default": "global",
+					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"description": "Scope annotation to be assigned to command scopes by the Add Scope IDs command"
+				},
+				"SFText Utility.dialogueAnnotation": {
+					"order": 6,
+					"type": "string",
+					"default": "global",
+					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"description": "Scope annotation to be assigned to dialogue scopes by the Add Scope IDs command"
+				},
+				"SFText Utility.commentAnnotation": {
+					"order": 7,
+					"type": "string",
+					"default": "global",
+					"enum": ["global", "local", "upwardChain", "downwardChain"],
+					"description": "Scope annotation to be assigned to comment scopes by the Add Scope IDs command"
 				}
 			}
 		}
